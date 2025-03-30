@@ -195,7 +195,7 @@ uint8_t RTC_DS1340::disableFTout() {
   Wire.beginTransmission(DS1340_ADDRESS);
   Wire.write(7);	
   Wire.write(setreg);                      // Write the values back
-  Wire.endTransmission();
+  return Wire.endTransmission();
 }
 
 DateTime RTC_DS1340::now() {
